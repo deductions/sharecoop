@@ -1,0 +1,33 @@
+@prefix dc: <http://purl.org/dc/elements/1.1/>.
+@prefix dct: <http://purl.org/dc/terms/>.
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix foaf: <http://xmlns.com/foaf/0.1/>.
+@prefix cco: <http://purl.org/ontology/cco/core#> .
+@prefix form: <http://deductions-software.com/ontologies/forms.owl.ttl#> .
+@prefix sform: <urn:ShareCoop/forms#> .
+@prefix scoop: <urn:ShareCoop/vocab#> .
+@prefix      : <urn:ShareCoop/vocab#> .
+
+# form specifications for ShareCoop 
+
+sform:personForm
+  form:classDomain :Prospect ;
+  form:showProperties (
+	foaf:givenName foaf:familyName
+	foaf:phone
+	foaf:mbox
+	scoop:realEstateChoice
+	scoop:realEstateBuying
+	scoop:contactOrigin
+  ) .
+
+sform:realEstateForm
+  form:classDomain :RealEstate ;
+  form:showProperties (
+    :city
+    :roomsCount
+    :price
+  ) .
+
+
+

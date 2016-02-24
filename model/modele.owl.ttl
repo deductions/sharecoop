@@ -1,0 +1,62 @@
+@prefix dc:      <http://purl.org/dc/elements/1.1/> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:    <http://xmlns.com/foaf/0.1/> .
+@prefix owl:     <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix igeo:    <http://rdf.insee.fr/def/geo#> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+
+@prefix scoop: <urn:ShareCoop/vocab#> .
+@prefix      : <urn:ShareCoop/vocab#> .
+
+
+:Prospect a owl:Class ;
+	rdfs:label "contact pour achat ou vente immobilier"@fr ;
+	rdfs:comment "contact pour achat neuf (habitation ou locatif), ou vente immobilier"@fr ;
+	rdfs:subClassOf foaf:Person .
+
+:RealEstate  a owl:Class ;
+	rdfs:label "Bien immobilier"@fr .
+
+:NewRealEstate a owl:Class ;
+	rdfs:subClassOf :RealEstate ;
+	rdfs:label "Bien immobilier neuf"@fr .
+
+:realEstateChoice a owl:ObjectProperty ;
+	rdfs:label "choix achat-vente, etc"@fr ;
+	rdfs:domain :Prospect ;
+	rdfs:range [ owl:oneOf ( :buyingNewRealEstateForLiving :buyingNewRealEstateForRenting :sellingNewRealEstate :loanForRealEstate ) ] .
+:buyingNewRealEstateForLiving rdfs:label "achat neuf (habitation)"@fr .
+:buyingNewRealEstateForRenting rdfs:label "achat neuf (locatif)"@fr .
+:sellingNewRealEstate rdfs:label "vente immobilier"@fr .
+:loanForRealEstate rdfs:label "prêt (emprunt) immobilier ( montant, durée )"@fr .
+
+:realEstateBuying
+	a owl:ObjectProperty ;
+	rdfs:label "décrire le bien"@fr ;
+	rdfs:domain :Prospect ;
+	rdfs:range :NewRealEstate .
+
+:contactOrigin a owl:ObjectProperty ;
+	rdfs:label "ville"@fr ;
+	rdfs:domain :Prospect ;
+	rdfs:range foaf:Person .
+
+
+# Bien immo.:	ville - nb de pièces - prix
+:city a owl:ObjectProperty ;
+	rdfs:label "ville"@fr ;
+	rdfs:domain :RealEstate ;
+	rdfs:range igeo:Commune .
+
+:roomsCount a owl:DatatypeProperty ;
+	rdfs:label "nb de pièces"@fr ;
+	rdfs:domain :RealEstate ;
+	rdfs:range xsd:integer .
+
+:price a owl:DatatypeProperty ;
+	rdfs:label "prix"@fr ;
+	rdfs:domain :RealEstate ;
+	rdfs:range xsd:integer .
+
+

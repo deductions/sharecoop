@@ -13,3 +13,13 @@ server.pid
 *.eml
 /dist/
 .cache
+
+# added by hand
+.classpath
+.project
+.settings/
+TDB/
+TDB2/
+logfile.log
+logfile.log.*
+*.swp
