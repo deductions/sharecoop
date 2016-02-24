@@ -13,11 +13,15 @@
 sform:personForm
   form:classDomain :Prospect ;
   form:showProperties (
-	foaf:givenName foaf:familyName
-	foaf:phone
-	foaf:mbox
-	scoop:realEstateChoice
-	scoop:realEstateBuying
+	foaf:givenName	foaf:familyName
+	foaf:phone	foaf:mbox
+    form:a---------------
+	scoop:realEstateBuyingForLiving
+	scoop:realEstateBuyingForRenting
+	scoop:realEstateSelling
+	scoop:realEstateLoan
+
+    form:o---------------
 	scoop:contactOrigin
   ) .
 
@@ -29,5 +33,10 @@ sform:realEstateForm
     :price
   ) .
 
+sform:realEstateLoanForm
+  form:classDomain :RealEstateLoan ;
+  form:showProperties (
+    :amount :duration
+  ) .
 
 

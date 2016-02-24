@@ -15,27 +15,46 @@
 	rdfs:comment "contact pour achat neuf (habitation ou locatif), ou vente immobilier"@fr ;
 	rdfs:subClassOf foaf:Person .
 
-:RealEstate  a owl:Class ;
-	rdfs:label "Bien immobilier"@fr .
+:RealEstate a owl:Class ;
+	rdfs:label "Bien immobilier"@fr ;
+	rdfs:comment "décrire le bien"@fr .
 
 :NewRealEstate a owl:Class ;
 	rdfs:subClassOf :RealEstate ;
 	rdfs:label "Bien immobilier neuf"@fr .
 
-:realEstateChoice a owl:ObjectProperty ;
-	rdfs:label "choix achat-vente, etc"@fr ;
-	rdfs:domain :Prospect ;
-	rdfs:range [ owl:oneOf ( :buyingNewRealEstateForLiving :buyingNewRealEstateForRenting :sellingNewRealEstate :loanForRealEstate ) ] .
-:buyingNewRealEstateForLiving rdfs:label "achat neuf (habitation)"@fr .
-:buyingNewRealEstateForRenting rdfs:label "achat neuf (locatif)"@fr .
-:sellingNewRealEstate rdfs:label "vente immobilier"@fr .
-:loanForRealEstate rdfs:label "prêt (emprunt) immobilier ( montant, durée )"@fr .
+:RealEstateLoan a owl:Class ;
+	rdfs:label "Prêt immobilier"@fr .
 
-:realEstateBuying
+# :realEstateChoice a owl:ObjectProperty ;
+# 	rdfs:label "choix achat-vente, etc"@fr ;
+# 	rdfs:domain :Prospect ;
+# 	rdfs:range [ owl:oneOf ( :buyingNewRealEstateForLiving :buyingNewRealEstateForRenting :sellingNewRealEstate :loanForRealEstate ) ] .
+# :buyingNewRealEstateForLiving rdfs:label "achat neuf (habitation)"@fr .
+# :buyingNewRealEstateForRenting rdfs:label "achat neuf (locatif)"@fr .
+# :sellingNewRealEstate rdfs:label "vente immobilier"@fr .
+# :loanForRealEstate rdfs:label "prêt (emprunt) immobilier ( montant, durée )"@fr .
+
+:realEstateBuyingForLiving
 	a owl:ObjectProperty ;
-	rdfs:label "décrire le bien"@fr ;
+	rdfs:label "achat neuf (habitation)"@fr ;
 	rdfs:domain :Prospect ;
 	rdfs:range :NewRealEstate .
+:realEstateBuyingForRenting
+	a owl:ObjectProperty ;
+	rdfs:label "achat neuf (locatif)"@fr ;
+	rdfs:domain :Prospect ;
+	rdfs:range :NewRealEstate .
+:realEstateSelling
+	a owl:ObjectProperty ;
+	rdfs:label "vente immobilier"@fr ;
+	rdfs:domain :Prospect ;
+	rdfs:range :NewRealEstate .
+:realEstateLoan
+	a owl:ObjectProperty ;
+	rdfs:label "prêt (emprunt) immobilier ( montant, durée )"@fr ;
+	rdfs:domain :Prospect ;
+	rdfs:range :RealEstateLoan .
 
 :contactOrigin a owl:ObjectProperty ;
 	rdfs:label "ville"@fr ;
@@ -59,4 +78,14 @@
 	rdfs:domain :RealEstate ;
 	rdfs:range xsd:integer .
 
+# prêt (emprunt) immobilier ( montant, durée )
+:amount a owl:DatatypeProperty ;
+	rdfs:label "montant"@fr ;
+	rdfs:domain :RealEstateLoan ;
+	rdfs:range xsd:integer .
+
+:duration a owl:DatatypeProperty ;
+	rdfs:label "durée (ans)"@fr ;
+	rdfs:domain :RealEstateLoan ;
+	rdfs:range xsd:integer .
 
