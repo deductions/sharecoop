@@ -15,6 +15,7 @@ sform:personForm
   form:showProperties (
 	foaf:givenName	foaf:familyName
 	foaf:phone	foaf:mbox
+	rdfs:comment
     form:a---------------
 	scoop:realEstateBuyingForLiving
 	scoop:realEstateBuyingForRenting
@@ -31,12 +32,14 @@ sform:realEstateForm
     :city
     :roomsCount
     :price
+    rdfs:comment
   ) .
 
 sform:realEstateLoanForm
   form:classDomain :RealEstateLoan ;
   form:showProperties (
     :amount :duration
+    rdfs:comment
   ) .
 
 
