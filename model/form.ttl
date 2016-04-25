@@ -18,8 +18,8 @@ sform:exchangePersonForm
 	foaf:phone	foaf:mbox
 	rdfs:comment
     form:a---------------
-	schema:Offer
-        schema:SearchAction
+	schema:makesOffer
+        scoop:makesSearchAction
   ) .
 
 # sform:offerForm form:classDomain schema:Offer ; form:showProperties ( ) .

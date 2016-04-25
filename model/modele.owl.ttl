@@ -5,8 +5,15 @@
 @prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix igeo:    <http://rdf.insee.fr/def/geo#> .
 @prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+@prefix schema: <http://schema.org/>.
 
 @prefix scoop: <urn:ShareCoop/vocab#> .
 @prefix      : <urn:ShareCoop/vocab#> .
 
+scoop:makesSearchAction
+	a owl:ObjectProperty ;
+	rdfs:label "recherche service ou produit"@fr ;
+	rdfs:comment "tout ce qu'on veut!"@fr ;
+	rdfs:domain foaf:Person ;
+	rdfs:range schema:SearchAction .
 
