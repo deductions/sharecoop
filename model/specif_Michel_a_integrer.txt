@@ -1,0 +1,65 @@
+Voici l'ébauche des questionnaires d'interactions sur les marchés actifs de Share.coop
+
+Achat d'immobilier neuf
+Prix  ----------------    Montant prévisionnel de notre MAXIdon sur honoraires : (calcul automatique 1,5 % de Prix)
+Maison, appart, autre
+Nb pièces
+Surf.
+Nom
+Mail
+Tél
+Ville
+CP
+Spécificités (balcon/terrasse, orientation, parking,...)
+Commentaires
+Association ou cause bénéficiaire
+Comment nous avez-vous connu ? Association x internet x autre x
+
+
+Vente d'immobilier ancien
+Prix  ----------------    Montant prévisionnel de notre MAXIdon sur honoraires : (calcul automatique 1,5 % de Prix)
+Maison, appart, autre
+Nb pièces
+Surf.
+Nom
+Mail
+Tél
+Ville
+CP
+Nb pièces
+Spécificités (balcon/terrasse, orientation, parking,...)
+Commentaires
+
+Association ou cause bénéficiaire
+Comment nous avez-vous connu ? Association x internet x autre x
+
+Demande de prêt immobilier
+
+Votre achat est  x Immédiat x Moins de 6 mois x Simple demande de renseignements
+>
+> Code postal du projet XX
+>
+> vous souhaitez emprunter x Moins de 200 000 € x Plus de 200 000 €
+>
+> Civilité x Madame x Monsieur x Mademoiselle
+>
+> Nom                                                             Prénom
+>
+> Code postal lieu habitation xx
+>
+> E-mail
+>
+> Téléphone
+>
+Montant prévisionnel du Chèque solidaire : ( calcul selon <200 k€ ou >à 200 k€ = 500 € ou  1.000 €)
+Association ou cause bénéficiaire
+> Comment nous avez-vous connu ? Association x internet x autre x
+>
+
+
+Questionnaire Widget "Notre MAXIdon"
+Votre vente immobilière ou achat immobilier neuf
+Montant vente ou achat : .............
+Montant MAXIdon sur honoraires bancaires : = (montant vente ou achat  x 1,5%)
+
+
